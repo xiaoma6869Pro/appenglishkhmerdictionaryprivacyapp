@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - English Khmer Dictionary</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #3b82f6;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --text-light: #9ca3af;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f9fafb;
+            --bg-accent: #eff6ff;
+            --border-color: #e5e7eb;
+            --success-color: #10b981;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary-color: #3b82f6;
+                --secondary-color: #2563eb;
+                --accent-color: #60a5fa;
+                --text-primary: #f9fafb;
+                --text-secondary: #d1d5db;
+                --text-light: #9ca3af;
+                --bg-primary: #111827;
+                --bg-secondary: #1f2937;
+                --bg-accent: #1e3a8a;
+                --border-color: #374151;
+                --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+                --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(180deg); }
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .language-toggle {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            gap: 1rem;
+        }
+
+        .lang-btn {
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--primary-color);
+            background: transparent;
+            color: var(--primary-color);
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .lang-btn.active {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .lang-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .content {
+            background: var(--bg-primary);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-color);
+        }
+
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--accent-color);
+            display: inline-block;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, var(--bg-accent) 0%, transparent 100%);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-color);
+            margin: 1.5rem 0;
+        }
+
+        .contact-info {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .last-updated {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-top: 2rem;
+            font-style: italic;
+        }
+
+        .khmer-text {
+            font-family: 'Khmer OS', 'Moul', serif;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 1.5rem;
+            }
+            
+            .language-toggle {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .icon {
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🔒 Privacy Policy</h1>
+            <p>English-Khmer Dictionary App</p>
+        </header>
+
+        <div class="language-toggle">
+            <button class="lang-btn active" onclick="switchLanguage('en')">
+                🇺🇸 English
+            </button>
+            <button class="lang-btn" onclick="switchLanguage('km')">
+                🇰🇭 ខ្មែរ
+            </button>
+        </div>
+
+        <div class="content">
+            <!-- English Content -->
+            <div id="en" class="lang-content active">
+                <div class="highlight">
+                    <h2><span class="icon">🛡️</span>Your Privacy Matters</h2>
+                    <p><strong>We respect your privacy and are committed to protecting it.</strong> This English-Khmer Dictionary app is designed with privacy in mind - we do not collect, store, or share any personal information about our users.</p>
+                </div>
+
+                <h2><span class="icon">📱</span>Information We Do NOT Collect</h2>
+                <p>Our app is built with a privacy-first approach. We do not collect:</p>
+                <ul>
+                    <li>Personal information (name, email, phone number)</li>
+                    <li>Location data</li>
+                    <li>Device identifiers</li>
+                    <li>Usage analytics or tracking data</li>
+                    <li>Search history or queries</li>
+                    <li>Any other personal or sensitive information</li>
+                </ul>
+
+                <h2><span class="icon">☁️</span>CloudKit Data Storage</h2>
+                <p>Our dictionary content is stored using Apple's CloudKit service. This means:</p>
+                <ul>
+                    <li>Dictionary data (words, definitions, translations) is stored on Apple's secure servers</li>
+                    <li>This data is purely educational content and contains no personal information</li>
+                    <li>Apple's CloudKit infrastructure ensures data security and privacy</li>
+                    <li>We cannot access or identify individual users through this system</li>
+                </ul>
+
+                <div class="highlight">
+                    <h3><span class="icon">🔐</span>Data Security</h3>
+                    <p>All dictionary content is transmitted and stored securely through Apple's CloudKit infrastructure, which uses industry-standard encryption and security measures.</p>
+                </div>
+
+                <h2><span class="icon">📖</span>How We Use Information</h2>
+                <p>Since we don't collect personal information, we cannot use it. The app simply:</p>
+                <ul>
+                    <li>Provides English-Khmer translations</li>
+                    <li>Delivers dictionary content from our CloudKit database</li>
+                    <li>Functions entirely offline after initial data sync</li>
+                </ul>
+
+                <h2><span class="icon">🚫</span>Third-Party Services</h2>
+                <p>We do not integrate with any third-party analytics, advertising, or tracking services. The only external service we use is Apple's CloudKit for dictionary content delivery.</p>
+
+                <h2><span class="icon">👶</span>Children's Privacy</h2>
+                <p>Our app is suitable for all ages and does not collect any information from children or adults. We comply with all applicable privacy laws including COPPA.</p>
+
+                <h2><span class="icon">🔄</span>Changes to This Policy</h2>
+                <p>We may update this privacy policy occasionally. Any changes will be reflected in the app and on this page with an updated revision date.</p>
+
+                <h2><span class="icon">📞</span>Contact Us</h2>
+                <div class="contact-info">
+                    <p>If you have any questions about this privacy policy or our app, please contact us:</p>
+                    <p><strong>Email:</strong> privacy@englishkhmer.app</p>
+                    <p><strong>Support:</strong> help@englishkhmer.app</p>
+                </div>
+            </div>
+
+            <!-- Khmer Content -->
+            <div id="km" class="lang-content khmer-text">
+                <div class="highlight">
+                    <h2><span class="icon">🛡️</span>ការការពារភាពឯកជនរបស់អ្នក</h2>
+                    <p><strong>យើងគោរពការរៀបចំភាពឯកជនរបស់អ្នក និងប្តេជ្ញាការពារវា។</strong> កម្មវិធីវចនានុក្រមអង់គ្លេស-ខ្មែរនេះត្រូវបានរចនាដោយគិតពីភាពឯកជន - យើងមិនប្រមូល រក្សាទុក ឬចែករំលែកព័ត៌មានផ្ទាល់ខ្លួនណាមួយអំពីអ្នកប្រើប្រាស់របស់យើងនោះទេ។</p>
+                </div>
+
+                <h2><span class="icon">📱</span>ព័ត៌មានដែលយើងមិនប្រមូលប្រមូល</h2>
+                <p>កម្មវិធីរបស់យើងត្រូវបានបង្កើតដោយមានអាទិភាពលើការពារភាពឯកជន។ យើងមិនប្រមូល៖</p>
+                <ul>
+                    <li>ព័ត៌មានផ្ទាល់ខ្លួន (ឈ្មោះ អ៊ីមែល លេខទូរស័ព្វ)</li>
+                    <li>ទិន្នន័យទីតាំង</li>
+                    <li>អត្តសញ្ញាណឧបករណ៍</li>
+                    <li>ការវិភាគការប្រើប្រាស់ ឬទិន្នន័យតាមដាន</li>
+                    <li>ប្រវត្តិស្វែងរក ឬសំណួរ</li>
+                    <li>ព័ត៌មានផ្ទាល់ខ្លួន ឬរសើបផ្សេងទៀត</li>
+                </ul>
+
+                <h2><span class="icon">☁️</span>ការរក្សាទុកទិន្នន័យ CloudKit</h2>
+                <p>មាតិកាវចនានុក្រមរបស់យើងត្រូវបានរក្សាទុកដោយប្រើសេវាកម្ម CloudKit របស់ Apple។ នេះមានន័យថា៖</p>
+                <ul>
+                    <li>ទិន្នន័យវចនានុក្រម (ពាក្យ និយមន័យ ការបកប្រែ) ត្រូវបានរក្សាទុកនៅលើម៉ាស៊ីនមេដែលមានសុវត្ថិភាពរបស់ Apple</li>
+                    <li>ទិន្នន័យនេះគឺជាមាតិកាអប់រំសុទ្ធ និងមិនមានព័ត៌មានផ្ទាល់ខ្លួនទេ</li>
+                    <li>ហេដ្ឋារចនាសម្ព័ន្ធ CloudKit របស់ Apple ធានាសុវត្ថិភាព និងភាពឯកជនទិន្នន័យ</li>
+                    <li>យើងមិនអាចចូលដំណើរការ ឬកំណត់អត្តសញ្ញាណអ្នកប្រើប្រាស់ជាក់លាក់តាមរយៈប្រព័ន្ធនេះបានទេ</li>
+                </ul>
+
+                <div class="highlight">
+                    <h3><span class="icon">🔐</span>សុវត្ថិភាពទិន្នន័យ</h3>
+                    <p>មាតិកាវចនានុក្រមទាំងអស់ត្រូវបានបញ្ជូន និងរក្សាទុកដោយសុវត្ថិភាពតាមរយៈហេដ្ឋារចនាសម្ព័ន្ធ CloudKit របស់ Apple ដែលប្រើការអ៊ិនគ្រីប និងវិធានការសុវត្ថិភាពស្តង់ដារឧស្សាហកម្ម។</p>
+                </div>
+
+                <h2><span class="icon">📖</span>របៀបដែលយើងប្រើព័ត៌មាន</h2>
+                <p>ដោយសារយើងមិនប្រមូលព័ត៌មានផ្ទាល់ខ្លួន យើងមិនអាចប្រើវាបានទេ។ កម្មវិធីគ្រាន់តែ៖</p>
+                <ul>
+                    <li>ផ្តល់ការបកប្រែអង់គ្លេស-ខ្មែរ</li>
+                    <li>ចែកចាយមាតិកាវចនានុក្រមពីមូលដ្ឋានទិន្នន័យ CloudKit របស់យើង</li>
+                    <li>ដំណើរការទាំងស្រុងក្រៅបណ្តាញបន្ទាប់ពីការធ្វើសមកាលកម្មទិន្នន័យដំបូង</li>
+                </ul>
+
+                <h2><span class="icon">🚫</span>សេវាកម្មភាគីទីបី</h2>
+                <p>យើងមិនរួមបញ្ចូលជាមួយសេវាកម្មវិភាគ ការផ្សាយពាណិជ្ជកម្ម ឬការតាមដានភាគីទីបីណាមួយទេ។ សេវាកម្មខាងក្រៅតែមួយគត់ដែលយើងប្រើគឺ CloudKit របស់ Apple សម្រាប់ការចែកចាយមាតិកាវចនានុក្រម។</p>
+
+                <h2><span class="icon">👶</span>ការការពារភាពឯកជនកុមារ</h2>
+                <p>កម្មវិធីរបស់យើងសមស្របសម្រាប់គ្រប់វ័យ និងមិនប្រមូលព័ត៌មានណាមួយពីកុមារ ឬមនុស្សពេញវ័យទេ។ យើងគោរពតាមច្បាប់ការពារភាពឯកជនទាំងអស់ដែលអាចអនុវត្តបាន រួមទាំង COPPA។</p>
+
+                <h2><span class="icon">🔄</span>ការផ្លាស់ប្តូរគោលនយោបាយនេះ</h2>
+                <p>យើងអាចធ្វើបច្ចុប្បន្នភាពគោលនយោបាយការពារភាពឯកជននេះម្តងម្កាល។ ការផ្លាស់ប្តូរណាមួយនឹងត្រូវបានឆ្លុះបញ្ចាំងនៅក្នុងកម្មវិធី និងនៅលើទំព័រនេះជាមួយនឹងកាលបរិច្ឆេទធ្វើបច្ចុប្បន្នភាព។</p>
+
+                <h2><span class="icon">📞</span>ទាក់ទងយើង</h2>
+                <div class="contact-info">
+                    <p>ប្រសិនបើអ្នកមានសំណួរណាមួយអំពីគោលនយោបាយការពារភាពឯកជននេះ ឬកម្មវិធីរបស់យើង សូមទាក់ទងយើង៖</p>
+                    <p><strong>អ៊ីមែល៖</strong> privacy@englishkhmer.app</p>
+                    <p><strong>ជំនួយ៖</strong> help@englishkhmer.app</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="last-updated">
+            Last updated: August 26, 2025 | ធ្វើបច្ចុប្បន្នភាពចុងក្រោយ៖ ២៦ សីហា ២០២៥
+        </div>
+    </div>
+
+    <script>
+        function switchLanguage(lang) {
+            // Hide all language content
+            document.querySelectorAll('.lang-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Show selected language content
+            document.getElementById(lang).classList.add('active');
+            
+            // Update button states
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            event.target.classList.add('active');
+        }
+
+        // Add smooth scrolling for better UX
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
